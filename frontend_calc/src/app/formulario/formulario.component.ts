@@ -11,7 +11,7 @@ export class FormularioComponent {
   operandoB: number;
   @Output() enviarOperandos = new EventEmitter<{ operandoA: number, operandoB: number }>();
 
-  sumar(): void {
+  multiplicar(): void {
     // Emitir un objeto que contenga los dos operandos
     this.enviarOperandos.emit({ operandoA: this.operandoA, operandoB: this.operandoB });
   }

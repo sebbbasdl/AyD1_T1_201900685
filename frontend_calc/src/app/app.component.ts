@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent implements OnInit {
   valorOperandoA: number = 0;
   valorOperandoB: number = 0;
-  suma: number;
+  multi: number;
   titulo = 'Aplicación Calculadora';
 
   constructor(private http: HttpClient) {}
@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
     this.http.post<any>(url, data).subscribe(
       (response) => {
         console.log('Respuesta del backend:', response);
-        this.suma = response.suma; // Guardamos el valor de la suma en la propiedad suma de nuestro componente
+        this.multi = response.multi; // Guardamos el valor de la multi en la propiedad multi de nuestro componente
       },
       (error) => {
         console.error('Error en la petición al backend:', error);

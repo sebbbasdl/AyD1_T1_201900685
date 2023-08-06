@@ -16,11 +16,11 @@ app.post('/api/endpoint', (req, res) => {
   const valor1 = parseInt(datos.key1);
   const valor2 = parseInt(datos.key2);
 
-  // Calcular la suma de los valores recibidos
-  const suma = valor1 + valor2;
+  // Calcular la multi de los valores recibidos
+  const multi = valor1 * valor2;
 
-  // Responder al frontend con la suma
-  res.json({ suma: suma });
+  // Responder al frontend con la multi
+  res.json({ multi: multi });
 });
 
 app.listen(port, () => {
