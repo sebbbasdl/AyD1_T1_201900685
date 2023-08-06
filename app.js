@@ -9,6 +9,14 @@ const port = 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
+app.get('/api/data', (req, res) => {
+  const data = {
+    message: 'Sebastian Alejandro de Leon Tenaz',
+
+  };
+  res.json(data);
+});
+
 app.post('/api/endpoint', (req, res) => {
   const datos = req.body;
 
