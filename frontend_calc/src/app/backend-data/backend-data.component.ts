@@ -12,6 +12,8 @@ export class BackendDataComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    
+    this.http.get<any>('http://localhost:3000/api/data').subscribe((data) => {
+      this.message = data.message;
+    });
   }
 }
